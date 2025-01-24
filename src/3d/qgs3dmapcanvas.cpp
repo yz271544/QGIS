@@ -26,6 +26,7 @@
 #include <Qt3DLogic/QLogicAspect>
 #include <Qt3DRender/QCamera>
 #include <Qt3DLogic/QFrameAction>
+#include <qlogging.h>
 
 #include "qgs3dmapcanvas.h"
 #include "qgs3dmapscene.h"
@@ -208,9 +209,10 @@ void Qgs3DMapCanvas::setViewFromTop( const QgsPointXY &center, float distance, f
 
 void Qgs3DMapCanvas::saveAsImage( const QString &fileName, const QString &fileFormat )
 {
+  qDebug() << "Qgs3DMapCanvas saveAsImage";
   if ( !mScene || fileName.isEmpty() )
     return;
-
+  qDebug() << "Qgs3DMapCanvas 111";
   mCaptureFileName = fileName;
   mCaptureFileFormat = fileFormat;
   mEngine->setRenderCaptureEnabled( true );

@@ -36,6 +36,8 @@ CMakePresets.json
 /CMakeLists.txt.user
 /CMakeLists.txt.user.*
 /build*
+/output
+/cmake-build-debug
 Makefile
 Testing/*
 Thumb.db

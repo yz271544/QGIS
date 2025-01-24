@@ -106,6 +106,8 @@ class _3D_EXPORT QgsLayoutItem3DMap : public QgsLayoutItem, public QgsTemporalRa
 
     void finalizeRestoreFromXml() override;
 
+    void moveCamera(QgsVector3D lookAtCenterPoint, float distance, float pitchAngle, float headingAngle);
+
   public slots:
     void refresh() override;
 
